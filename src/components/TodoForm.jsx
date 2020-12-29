@@ -31,7 +31,7 @@ const TodoForm = ({ addTodo }) => {
   );
 };
 
-TodoForm.PropTypes = {
+TodoForm.propTypes = {
   addTodo: PropTypes.func.isRequired
 };
 
