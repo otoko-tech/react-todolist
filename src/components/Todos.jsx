@@ -6,17 +6,25 @@ import Todo from "./Todo";
 const Todos = ({ todos, completeTodo }) => {
   return (
     <section className="todos">
-      {todos.map((todo, index) => {
-        return (
-          <Todo
-            key={index}
-            text={todo.text}
-            isCompleted={todo.isCompleted}
-            completeTodo={completeTodo}
-            index={index}
-          />
-        );
-      })}
+      {todos.length > 0 &&
+        todos.map((todo, index) => {
+          return (
+            <Todo
+              key={index}
+              text={todo.text}
+              isCompleted={todo.isCompleted}
+              completeTodo={completeTodo}
+              index={index}
+            />
+          );
+        })}
+
+      {todos.length === 0 && (
+        <div className="todo-placeholder-text">
+          Klik tombol <span className="add-button-placeholder-text">ADD</span>{" "}
+          di atas untuk menambah todo baru
+        </div>
+      )}
     </section>
   );
 };
