@@ -46,7 +46,7 @@ Container.propTypes = {
   ]),
   flexWrap: PropTypes.oneOf(["nowrap", "wrap", "wrap-reverse"]),
   justifyContent: PropTypes.oneOf([
-    "flex-star",
+    "flex-start",
     "flex-end",
     "center",
     "space-between",
