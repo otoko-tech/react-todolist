@@ -4,33 +4,12 @@ import { jsx } from "@emotion/core";
 import PropTypes from "prop-types";
 import { useTheme } from "emotion-theming";
 
-// import cx from "classnames";
-
-// import styles from "./button.module.css";
 import * as styles from "./button.styles";
 
 const Button = ({ text, onClick, color, align }) => {
-  // const classNames = [
-  //   "header-btn",
-  //   color === "black" && "main-black-color",
-  //   color === "red" && "main-red-color",
-  //   align === "left" && "align-left",
-  //   align === "right" && "align-right"
-  // ].join(" ");
-
-  // const classNames = cx(styles.headerBtn, {
-  //   [styles.mainBlackColor]: color === "black",
-  //   [styles.mainRedColor]: color === "red",
-  //   [styles.alignLeft]: align === "left",
-  //   [styles.alignRight]: align === "right"
-  // });
-
   const theme = useTheme();
 
   return (
-    // <button className={classNames} onClick={onClick}>
-    //   {text}
-    // </button>
     <button css={styles.button({ align, color, theme })} onClick={onClick}>
       {text}
     </button>
