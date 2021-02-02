@@ -2,8 +2,8 @@
 import { jsx } from "@emotion/core";
 import { Link } from "react-router-dom";
 
-import Container from "../../layout/Container";
-import Item from "../../layout/Item";
+import Container from "../../layout/ContainerClass";
+import Item from "../../layout/ItemClass";
 
 import * as styles from "./AboutContent.styles";
 

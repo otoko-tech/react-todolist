@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-
+import { Link } from "react-router-dom";
 import Todo from "../todo/TodoClass";
-import Container from "../../layout/Container";
+import Container from "../../layout/ContainerClass";
 
 const StyledTodoPlaceholderText = styled.div`
   font-family: "Homemade Apple", sans-serif;
@@ -15,6 +15,12 @@ const StyledTodoPlaceholderText = styled.div`
 const StyledAddButtonPlaceholderText = styled.span`
   font-family: "Bungee", sans-serif;
   font-size: 24px;
+`;
+
+const StyledSeeAboutPlaceholderText = styled.span`
+  font-family: "Bungee", sans-serif;
+  font-size: 18px;
+  text-align: center;
 `;
 
 class Todos extends React.Component {
@@ -37,17 +43,21 @@ class Todos extends React.Component {
               );
             })}
           {todos.length === 0 && (
-            <StyledTodoPlaceholderText>
-              {[
-                "Klik tombol ",
-                <StyledAddButtonPlaceholderText>
-                  Add
-                </StyledAddButtonPlaceholderText>,
-                " di atas untuk menambah todo baru"
-              ]}
-            </StyledTodoPlaceholderText>
+            <React.Fragment>
+              <StyledTodoPlaceholderText>
+                {[
+                  "Klik tombol ",
+                  <StyledAddButtonPlaceholderText>
+                    Add
+                  </StyledAddButtonPlaceholderText>,
+                  " di atas untuk menambah todo baru"
+                ]}
+              </StyledTodoPlaceholderText>
+              <StyledSeeAboutPlaceholderText>
+                <Link to="/about">About Page</Link>
+              </StyledSeeAboutPlaceholderText>
+            </React.Fragment>
           )}
-          ;
         </Container>
       </section>
     );
